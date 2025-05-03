@@ -17,7 +17,7 @@ function App() {
       {/* HERO */}
       <section id="welcome-section" className="welcome-section">
         <h1>John Fuller</h1>
-        <p>Web & Graphic Designer</p>
+        <p>Web Devloper & Graphic Designer</p>
         <img
           src={`${PUBLIC}/logo-f.png`}
           alt="Logo F"
