@@ -1,0 +1,395 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap");
+
+@font-face {
+  font-family: "Comic Neue";
+  src: url(https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap);
+}
+
+portfolio/* Custom properties/variables  */
+:root {
+  --main-white: #f0f0f0;
+  --main-red: #be3144;
+  --main-blue: #45567d;
+  --main-gray: #303841;
+}
+
+/* Base reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* box-sizing and font sizing */
+*,
+*::before,
+*::after {
+  box-sizing: space-evenly;
+}
+
+html {
+  box-sizing: border-box;
+  font-family: "Comic Neue";
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+}
+
+/* Base styles */
+@font-face {
+  font-family: "Comic Neue";
+  src: url(https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap);
+}
+
+body {
+  font-style: italic;
+  font-family: "Comic Neue";
+  background-color: black;
+  font-size: 1.8rem;
+  font-weight: 400;
+  line-height: 1.4;
+  color: white;
+  background-image: url(https://i.ibb.co/zbvfjzL/F-2.png);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  height: 0px;
+  margin-left: -49px;
+}
+
+@font-face {
+  font-family: "Comic Neue";
+  src: url(https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@1,700&display=swap);
+}
+
+h1,
+h2 {
+  font-style: italic;
+  font-family: "Comic Neue";
+  font-weight: 700;
+  text-align: center;
+  height: 80px;
+}
+
+h1 {
+  font-size: 6rem;
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+h2 {
+  font-size: 4.2rem;
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+ul {
+  list-style: none;
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+/* nav */
+
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: var(--main-red);
+  z-index: 10;
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+.nav-list {
+  display: flex;
+  margin-right: 2rem;
+  font-family: "Comic Neue";
+}
+
+.nav-list {
+  margin: 0 1rem;
+  font-family: "Comic Neue";
+}
+
+.nav-list a {
+  display: block;
+  font-size: 2.2rem;
+  padding: 2rem;
+  font-family: "Comic Neue";
+}
+
+.nav-list a:hover {
+  color: red;
+}
+
+/* Welcome section */
+
+.welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.welcome-section > p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: "Comic Neue";
+  color: var(--main-red);
+  height: 50%;
+  font-family: "Comic Neue";
+}
+
+/* Projects section */
+
+.projects-section {
+  text-align: center;
+  padding: 1rem 2rem;
+  background: var(--main-blue);
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+.projects-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+/* "Automagic" image grid using no media queries */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 26rem;
+  width: fit-content;
+  max-width: 1242px;
+  margin: 0 auto;
+  grid-template-rows: 124px;
+  margin-bottom: 6rem;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.project p:hover {
+  background: var(--main-gray);
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+  border-radius: 2px;
+  color: red;
+}
+
+.code {
+  color: var(--main-gray);
+  transition: color 0.3s ease-out;
+}
+
+.project:hover .code {
+  color: #ff7f50;
+}
+
+.project-image {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 5px;
+  width: 300px;
+  height: 300px;
+}
+
+.project-title {
+  font-size: 2rem;
+  padding: 2rem 0.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+.btn-show-all {
+  font-size: 2rem;
+  background: var(--main-gray);
+  transition: background 0.3s ease-out;
+  font-family: "Comic Neue";
+}
+
+.btn-show-all:hover {
+  background: var(--main-red);
+}
+
+.btn-show-all:hover > i {
+  transform: translateX(2px);
+}
+
+.btn-show-all > i {
+  margin-left: 10px;
+  transform: translateX(0);
+  transition: transform 0.3s ease-out;
+}
+
+/* Contact section */
+
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+  height: 650px;
+  padding-bottom: 50px;
+  background: var(--main-gray);
+  font-style: italic;
+  font-family: "Comic Neue";
+  padding-bottom: 50px;
+}
+
+.contact-section-header > h2 {
+  font-size: 6rem;
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+.contact-section-header > p {
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+.contact-links {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  margin-top: 4rem;
+  flex-wrap: wrap;
+  font-style: italic;
+  font-family: "Comic Neue";
+}
+
+.contact-details {
+  font-size: 2.4rem;
+  text-shadow: 2px 2px 1px #1f1f1f;
+  transition: transform 0.3s ease-out;
+  font-family: "Comic Neue";
+}
+
+.contact-details:hover {
+  transform: translateY(8px);
+  color: red;
+}
+
+@media (max-width: 808px) {
+  .nav {
+    font-style: italic;
+    justify-content: center;
+    font-family: "Comic Neue";
+  }
+  .nav-list a {
+    display: block;
+    font-size: 2.2rem;
+    padding: 3rem;
+    font-family: "Comic Neue";
+    background-color: black;
+    width: auto;
+  }
+
+  body {
+    align-content: center;
+    font-size: 60%;
+    background-position: 47% -160px;
+    background-attachment: fixed;
+    z-index: -10;
+    margin-left: auto;
+    background-image: url(https://i.ibb.co/zbvfjzL/F-2.png);
+  }
+
+  .welcome-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 200vh;
+    font-family: "Comic Neue";
+  }
+
+  .projects-section-header {
+    max-width: 100%;
+    margin: 0;
+    border-bottom: 0;
+    font-style: italic;
+    font-family: "Comic Neue";
+  }
+  .projects-section {
+    text-align: center;
+    padding: 40rem 2rem;
+    background: var(--main-blue);
+    font-style: italic;
+    font-family: "Comic Neue";
+  }
+
+  .projects-grid {
+    display: grid;
+    grid-template-rows: repeat(auto-fit, minmax(320px, 1fr));
+    grid-gap: 25px;
+    max-width: 12px;
+    margin: auto;
+    margin-bottom: 6rem;
+    box-sizing: border-box;
+    justify-content: space-evenly;
+  }
+
+  .project-image {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .contact-section-header > h2 {
+    font-size: 4rem;
+    font-family: "Comic Neue";
+  }
+
+  .contact-section-header > p {
+    font-style: italic;
+    font-family: "Comic Neue";
+    font-size: 16px;
+    padding: 1px;
+    margin: -25px;
+  }
+
+  .contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 528px;
+    padding-bottom: 38px;
+    background: var(--main-gray);
+    font-style: italic;
+    font-family: "Comic Neue";
+    padding-bottom: 131px;
+  }
+}
