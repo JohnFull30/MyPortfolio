@@ -19,7 +19,7 @@ function App() {
         <h1>John Fuller</h1>
         <p>Web & Graphic Designer</p>
         <img
-          src={`${PUBLIC}/logo-f.png`}
+          src={`${process.env.PUBLIC_URL}//logo-f.png`}
           alt="Logo F"
           className="hero-logo"
         />
@@ -43,7 +43,7 @@ function App() {
               rel="noreferrer"
             >
               <img
-                src={`${PUBLIC}/gotobago.jpg`}
+                src={`${process.env.PUBLIC_URL}//gotobago.jpg`}
                 alt="GoTobago Tours"
               />
               <p><em>GoTobago Tours</em></p>
@@ -55,7 +55,7 @@ function App() {
               rel="noreferrer"
             >
               <img
-                src={`${PUBLIC}/farm2table.jpg`}
+                src={`${process.env.PUBLIC_URL}//farm2table.jpg`}
                 alt="Farm2Table"
               />
               <p><em>Farm2Table</em></p>
@@ -67,7 +67,7 @@ function App() {
               rel="noreferrer"
             >
               <img
-                src={`${PUBLIC}/countdown.jpg`}
+                src={`${process.env.PUBLIC_URL}//countdown.jpg`}
                 alt="Gender Reveal Countdown"
               />
               <p><em>Gender Reveal Countdown</em></p>
@@ -79,7 +79,7 @@ function App() {
               rel="noreferrer"
             >
               <img
-                src={`${PUBLIC}/holistic-herbs.jpg`}
+                src={`${process.env.PUBLIC_URL}/}/holistic-herbs.jpg`}
                 alt="Holistic Herbs"
               />
               <p><em>Holistic Herbs</em></p>
