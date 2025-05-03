@@ -1,0 +1,43 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "🚀 Deploy Project (deploy.sh)",
+      "type": "shell",
+      "command": "deploy.sh",
+      "problemMatcher": [],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      }
+    },
+    {
+      "label": "🌱 Create Branch (branchscript.sh)",
+      "type": "shell",
+      "command": "branchscript.sh",
+      "args": ["${input:branchName}"],
+      "problemMatcher": [],
+      "group": "build"
+    },
+    {
+      "label": "🗑️ Delete Branch (deletescript.sh)",
+      "type": "shell",
+      "command": "deletescript.sh",
+      "args": ["${input:branchToDelete}"],
+      "problemMatcher": [],
+      "group": "build"
+    }
+  ],
+  "inputs": [
+    {
+      "id": "branchName",
+      "type": "promptString",
+      "description": "Enter the name for the new feature branch"
+    },
+    {
+      "id": "branchToDelete",
+      "type": "promptString",
+      "description": "Enter the branch name to delete"
+    }
+  ]
+}
