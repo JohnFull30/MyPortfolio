@@ -1,6 +1,8 @@
 import './App.css';
 
 function App() {
+  const PUBLIC = process.env.PUBLIC_URL;
+
   return (
     <div className="App">
       {/* NAV */}
@@ -16,7 +18,11 @@ function App() {
       <section id="welcome-section" className="welcome-section">
         <h1>John Fuller</h1>
         <p>Web & Graphic Designer</p>
-        <img src="/logo-f.png" alt="Logo F" className="hero-logo" />
+        <img
+          src={`${PUBLIC}/logo-f.png`}
+          alt="Logo F"
+          className="hero-logo"
+        />
       </section>
 
       {/* PROJECTS */}
@@ -25,26 +31,57 @@ function App() {
 
         <div className="projects-container">
           <img
-            src="/logo-f.png"
+            src={`${PUBLIC}/logo-f.png`}
             alt="Watermark F"
             className="projects-watermark"
           />
 
           <div className="projects-grid">
-            <a href="https://johnfull30.github.io/gt/" target="_blank" rel="noreferrer">
-              <img src="/gotobago.jpg" alt="GoTobago Tours" />
+            <a
+              href="https://johnfull30.github.io/gt/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={`${PUBLIC}/gotobago.jpg`}
+                alt="GoTobago Tours"
+              />
               <p><em>GoTobago Tours</em></p>
             </a>
-            <a href="https://johnfull30.github.io/f2t/" target="_blank" rel="noreferrer">
-              <img src="/farm2table.jpg" alt="Farm2Table" />
+
+            <a
+              href="https://johnfull30.github.io/f2t/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={`${PUBLIC}/farm2table.jpg`}
+                alt="Farm2Table"
+              />
               <p><em>Farm2Table</em></p>
             </a>
-            <a href="https://johnfull30.github.io/countdown/" target="_blank" rel="noreferrer">
-              <img src="/countdown.jpg" alt="Gender Reveal Countdown" />
+
+            <a
+              href="https://johnfull30.github.io/countdown/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={`${PUBLIC}/countdown.jpg`}
+                alt="Gender Reveal Countdown"
+              />
               <p><em>Gender Reveal Countdown</em></p>
             </a>
-            <a href="https://johnfull30.github.io/holistic-herbs/" target="_blank" rel="noreferrer">
-              <img src="/holistic-herbs.jpg" alt="Holistic Herbs" />
+
+            <a
+              href="https://johnfull30.github.io/holistic-herbs/"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <img
+                src={`${PUBLIC}/holistic-herbs.jpg`}
+                alt="Holistic Herbs"
+              />
               <p><em>Holistic Herbs</em></p>
             </a>
           </div>
@@ -56,8 +93,12 @@ function App() {
         <h2>Let's work together...</h2>
         <p><em>How do you like your code?</em></p>
         <div className="contact-buttons">
-          <a href="https://www.linkedin.com/in/john-fuller-03044322a/">Linkedin</a>
-          <a href="https://github.com/JohnFull30">GitHub</a>
+          <a
+            href="https://www.linkedin.com/in/john-fuller-03044322a/"
+            target="_blank"
+            rel="noreferrer"
+          >LinkedIn</a>
+          <a href="https://github.com/JohnFull30" target="_blank" rel="noreferrer">GitHub</a>
           <a href="mailto:johnathanfuller0@gmail.com">johnathanfuller0@gmail.com</a>
           <a href="tel:9199876632">(919)-987-6632</a>
         </div>
