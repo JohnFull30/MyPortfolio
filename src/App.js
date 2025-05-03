@@ -79,7 +79,7 @@ function App() {
               rel="noreferrer"
             >
               <img
-                src={`${process.env.PUBLIC_URL}/}/holistic-herbs.jpg`}
+                src={`${process.env.PUBLIC_URL}}//holistic-herbs.jpg`}
                 alt="Holistic Herbs"
               />
               <p><em>Holistic Herbs</em></p>
