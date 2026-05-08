@@ -60,15 +60,7 @@ function PortfolioHome() {
       <section id="welcome-section" className="welcome-section">
         <h1>John Fuller</h1>
         <p>Web Developer & Graphic Designer</p>
-        <section id="welcome-section" className="welcome-section">
-          <h1>John Fuller</h1>
-          <p>Web Developer & Graphic Designer</p>
-          <img
-            src={`${PUBLIC}/logo-f.png`}
-            alt="Logo F"
-            className="hero-logo"
-          />
-        </section>
+        <img src={`${PUBLIC}/logo-f.png`} alt="Logo F" className="hero-logo" />
       </section>
 
       <section id="projects" className="projects-section">
@@ -277,12 +269,12 @@ function HabitSquaresPage() {
 
         <div className="screenshot-grid">
           <PreviewPanel
-            image={`${PUBLIC}/habitsquares-app.jpeg`}
+            image={`${PUBLIC}/habitsquares-app.png`}
             title="Habit heatmap"
             description="See each habit as a simple progress card with clear daily completion."
           />
           <PreviewPanel
-            image={`${PUBLIC}/habitsquares-widgets.jpeg`}
+            image={`${PUBLIC}/habitsquares-widgets.png`}
             title="Today widget"
             description="Keep habit progress visible from the Home Screen with lightweight widget snapshots."
           />
