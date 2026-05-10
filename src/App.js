@@ -533,12 +533,21 @@ function HabitSquaresSupportPage() {
 }
 
 function ProductNav() {
+  const PUBLIC = process.env.PUBLIC_URL;
+
   return (
     <nav className="product-nav">
-      <a href="/MyPortfolio/" className="product-logo-link">
-        John Fuller
-      </a>
-      <div>
+      <div className="product-logo-row">
+        <a
+          href="/MyPortfolio/"
+          className="product-logo-link"
+          aria-label="John Fuller portfolio home"
+        >
+          <img src={`${PUBLIC}/logo-f.png`} alt="John Fuller logo" />
+        </a>
+      </div>
+
+      <div className="product-nav-links">
         <a href="#/projects/habitsquares">HabitSquares</a>
         <a href="#/projects/habitsquares/privacy">Privacy</a>
         <a href="#/projects/habitsquares/support">Support</a>
