@@ -1,6 +1,6 @@
-function ProductNav() {
-  const PUBLIC = process.env.PUBLIC_URL;
+import ThemeLogo from "./ThemeLogo.js";
 
+function ProductNav() {
   return (
     <nav className="product-nav">
       <div className="product-logo-row">
@@ -9,7 +9,7 @@ function ProductNav() {
           className="product-logo-link"
           aria-label="John Fuller portfolio home"
         >
-          <img src={`${PUBLIC}/logo-f.png`} alt="John Fuller logo" />
+          <ThemeLogo alt="John Fuller logo" />
         </a>
       </div>
 
