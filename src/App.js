@@ -16,9 +16,41 @@ function getRouteFromHash() {
   return "/";
 }
 
+function BackToTopButton() {
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsVisible(window.scrollY > 500);
+    };
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  const handleClick = () => {
+    window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
+  };
+
+  return (
+    <button
+      className={`back-to-top-button${isVisible ? " is-visible" : ""}`}
+      type="button"
+      aria-label="Back to top"
+      onClick={handleClick}
+    >
+      <span aria-hidden="true">↑</span>
+    </button>
+  );
+}
+
 function App() {
   const [route, setRoute] = useState(getRouteFromHash());
   const normalizedRoute = route.toLowerCase();
+  const isHabitSquaresRoute = normalizedRoute.startsWith(
+    "/projects/habitsquares",
+  );
 
   useEffect(() => {
     const handleHashChange = () => setRoute(getRouteFromHash());
@@ -28,21 +60,36 @@ function App() {
   }, []);
 
   useLayoutEffect(() => {
-    if (normalizedRoute.startsWith("/projects/habitsquares")) {
+    if (isHabitSquaresRoute) {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }
-  }, [normalizedRoute]);
+  }, [isHabitSquaresRoute, normalizedRoute]);
 
   if (normalizedRoute === "/projects/habitsquares") {
-    return <HabitSquaresPage />;
+    return (
+      <>
+        <HabitSquaresPage />
+        <BackToTopButton />
+      </>
+    );
   }
 
   if (normalizedRoute === "/projects/habitsquares/privacy") {
-    return <HabitSquaresPrivacyPage />;
+    return (
+      <>
+        <HabitSquaresPrivacyPage />
+        <BackToTopButton />
+      </>
+    );
   }
 
   if (normalizedRoute === "/projects/habitsquares/support") {
-    return <HabitSquaresSupportPage />;
+    return (
+      <>
+        <HabitSquaresSupportPage />
+        <BackToTopButton />
+      </>
+    );
   }
 
   return <PortfolioHome />;

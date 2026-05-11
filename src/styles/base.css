@@ -112,6 +112,9 @@ a {
   --legal-button-text: #ffffff;
   --legal-button-border: rgba(17, 24, 39, 0.12);
   --legal-button-border-hover: rgba(52, 199, 89, 0.45);
+  --back-to-top-hover-bg: #34c759;
+  --back-to-top-hover-text: #ffffff;
+  --back-to-top-hover-border: rgba(27, 156, 74, 0.45);
   --logo-tile-bg: rgba(255, 255, 255, 0.78);
   --logo-tile-border: rgba(17, 24, 39, 0.08);
 }
@@ -151,6 +154,9 @@ a {
     --legal-button-text: #ffffff;
     --legal-button-border: rgba(255, 255, 255, 0.22);
     --legal-button-border-hover: rgba(52, 199, 89, 0.55);
+    --back-to-top-hover-bg: var(--legal-button-bg-hover);
+    --back-to-top-hover-text: var(--text-strong);
+    --back-to-top-hover-border: var(--legal-button-border-hover);
     --logo-tile-bg: rgba(255, 255, 255, 0.1);
     --logo-tile-border: rgba(255, 255, 255, 0.16);
   }
