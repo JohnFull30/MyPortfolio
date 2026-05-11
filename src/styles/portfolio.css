@@ -149,37 +149,9 @@
   border-color: rgba(255, 255, 255, 0.08);
 }
 
-.habit-card-preview {
-  width: 100%;
-  height: 100%;
-  border-radius: 6px;
-  background:
-    radial-gradient(circle at 30% 20%, rgba(52, 199, 89, 0.18), transparent 32%),
-    linear-gradient(145deg, #f7f7fb, #e8e9f0);
-  display: grid;
-  place-items: center;
-  padding: 1rem;
-}
-
-.mini-heatmap {
-  display: grid;
-  grid-template-columns: repeat(7, 14px);
-  gap: 5px;
-  padding: 1rem;
-  border-radius: 22px;
-  background: rgba(255, 255, 255, 0.72);
-  box-shadow: 0 16px 30px rgba(15, 23, 42, 0.14);
-}
-
-.mini-square {
-  width: 14px;
-  height: 14px;
-  border-radius: 4px;
-  background: var(--mini-heatmap-empty);
-}
-
-.mini-square.active {
-  background: #34c759;
+.projects-grid img.habit-project-image {
+  object-fit: contain;
+  background: #f7f7f8;
 }
 
 /* CONTACT */

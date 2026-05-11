@@ -38,20 +38,11 @@ function PortfolioHome() {
               href="#/projects/habitsquares"
               className="project-card project-card-featured"
             >
-              <div className="habit-card-preview" aria-hidden="true">
-                <div className="mini-heatmap">
-                  {Array.from({ length: 42 }).map((_, index) => (
-                    <span
-                      key={index}
-                      className={
-                        [2, 3, 10, 14, 17, 22, 26, 29, 34, 39].includes(index)
-                          ? "mini-square active"
-                          : "mini-square"
-                      }
-                    />
-                  ))}
-                </div>
-              </div>
+              <img
+                src={`${PUBLIC}/habitsquares-preview.svg`}
+                alt="HabitSquares habit grid preview"
+                className="habit-project-image"
+              />
               <p>
                 <em>HabitSquares</em>
               </p>

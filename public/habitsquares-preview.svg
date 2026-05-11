@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1024" role="img" aria-labelledby="title desc">
+  <title id="title">HabitSquares preview</title>
+  <desc id="desc">A five by five grid of rounded habit squares with green completed days.</desc>
+  <rect width="1024" height="1024" fill="#f7f7f8"/>
+  <g>
+    <rect x="161" y="161" width="119" height="119" rx="27" fill="#c8c9cf"/>
+    <rect x="307" y="161" width="119" height="119" rx="27" fill="#d2d4d9"/>
+    <rect x="453" y="161" width="119" height="119" rx="27" fill="#c8c9cf"/>
+    <rect x="599" y="161" width="119" height="119" rx="27" fill="#d2d4d9"/>
+    <rect x="745" y="161" width="119" height="119" rx="27" fill="#c8c9cf"/>
+
+    <rect x="161" y="307" width="119" height="119" rx="27" fill="#d2d4d9"/>
+    <rect x="307" y="307" width="119" height="119" rx="27" fill="#96d978"/>
+    <rect x="453" y="307" width="119" height="119" rx="27" fill="#2ecb4d"/>
+    <rect x="599" y="307" width="119" height="119" rx="27" fill="#c8c9cf"/>
+    <rect x="745" y="307" width="119" height="119" rx="27" fill="#d2d4d9"/>
+
+    <rect x="161" y="453" width="119" height="119" rx="27" fill="#c8c9cf"/>
+    <rect x="307" y="453" width="119" height="119" rx="27" fill="#d2d4d9"/>
+    <rect x="453" y="453" width="119" height="119" rx="27" fill="#2ecb4d"/>
+    <rect x="599" y="453" width="119" height="119" rx="27" fill="#96d978"/>
+    <rect x="745" y="453" width="119" height="119" rx="27" fill="#c8c9cf"/>
+
+    <rect x="161" y="599" width="119" height="119" rx="27" fill="#d2d4d9"/>
+    <rect x="307" y="599" width="119" height="119" rx="27" fill="#96d978"/>
+    <rect x="453" y="599" width="119" height="119" rx="27" fill="#d2d4d9"/>
+    <rect x="599" y="599" width="119" height="119" rx="27" fill="#2ecb4d"/>
+    <rect x="745" y="599" width="119" height="119" rx="27" fill="#2ecb4d"/>
+
+    <rect x="161" y="745" width="119" height="119" rx="27" fill="#c8c9cf"/>
+    <rect x="307" y="745" width="119" height="119" rx="27" fill="#d2d4d9"/>
+    <rect x="453" y="745" width="119" height="119" rx="27" fill="#c8c9cf"/>
+    <rect x="599" y="745" width="119" height="119" rx="27" fill="#d2d4d9"/>
+    <rect x="754" y="754" width="101" height="101" rx="20" fill="none" stroke="#16191d" stroke-width="18"/>
+  </g>
+</svg>
