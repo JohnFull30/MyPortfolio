@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
 import "./App.css";
 
-import PortfolioHome from "./pages/PortfolioHome";
-import HabitSquaresPage from "./pages/HabitSquaresPage";
-import HabitSquaresPrivacyPage from "./pages/HabitSquaresPrivacyPage";
-import HabitSquaresSupportPage from "./pages/HabitSquaresSupportPage";
+import PortfolioHome from "./pages/PortfolioHome.js";
+import HabitSquaresPage from "./pages/HabitSquaresPage.js";
+import HabitSquaresPrivacyPage from "./pages/HabitSquaresPrivacyPage.js";
+import HabitSquaresSupportPage from "./pages/HabitSquaresSupportPage.js";
 
 function getRouteFromHash() {
   const hash = window.location.hash;
@@ -18,6 +18,7 @@ function getRouteFromHash() {
 
 function App() {
   const [route, setRoute] = useState(getRouteFromHash());
+  const normalizedRoute = route.toLowerCase();
 
   useEffect(() => {
     const handleHashChange = () => setRoute(getRouteFromHash());
@@ -26,15 +27,15 @@ function App() {
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
 
-  if (route === "/projects/habitsquares") {
+  if (normalizedRoute === "/projects/habitsquares") {
     return <HabitSquaresPage />;
   }
 
-  if (route === "/projects/habitsquares/privacy") {
+  if (normalizedRoute === "/projects/habitsquares/privacy") {
     return <HabitSquaresPrivacyPage />;
   }
 
-  if (route === "/projects/habitsquares/support") {
+  if (normalizedRoute === "/projects/habitsquares/support") {
     return <HabitSquaresSupportPage />;
   }
 

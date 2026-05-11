@@ -2,7 +2,7 @@ import ProductNav from "../components/ProductNav";
 import HeatmapPreview from "../components/HeatmapPreview";
 import PreviewPanel from "../components/PreviewPanel";
 import StepCard from "../components/StepCard";
-import RoadmapColumn from "../components/RoadmapColumn";
+import RoadmapColumn from "../components/RoadMapColumn";
 
 import {
   habitsquaresEmail,
@@ -16,7 +16,7 @@ function HabitSquaresPage() {
   const PUBLIC = process.env.PUBLIC_URL;
 
   return (
-    <main className="product-page habitsquares-page">
+    <main className="product-page">
       <ProductNav />
 
       <section className="product-hero">

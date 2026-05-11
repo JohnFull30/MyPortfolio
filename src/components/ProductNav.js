@@ -14,9 +14,9 @@ function ProductNav() {
       </div>
 
       <div className="product-nav-links">
-        <a href="#/projects/habitsquares">HabitSquares</a>
-        <a href="#/projects/habitsquares/privacy">Privacy</a>
-        <a href="#/projects/habitsquares/support">Support</a>
+        <a href="#/projects/HabitSquares">HabitSquares</a>
+        <a href="#/projects/HabitSquares/privacy">Privacy</a>
+        <a href="#/projects/HabitSquares/support">Support</a>
       </div>
     </nav>
   );
