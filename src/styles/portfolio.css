@@ -54,6 +54,7 @@
 
 /* PROJECTS */
 .projects-section {
+  scroll-margin-top: -3rem;
   padding: 5rem 1rem;
   background: #000;
   text-align: center;

@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import "./App.css";
 
 import PortfolioHome from "./pages/PortfolioHome.js";
@@ -26,6 +26,12 @@ function App() {
     window.addEventListener("hashchange", handleHashChange);
     return () => window.removeEventListener("hashchange", handleHashChange);
   }, []);
+
+  useLayoutEffect(() => {
+    if (normalizedRoute.startsWith("/projects/habitsquares")) {
+      window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+    }
+  }, [normalizedRoute]);
 
   if (normalizedRoute === "/projects/habitsquares") {
     return <HabitSquaresPage />;
