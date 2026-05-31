@@ -1,7 +1,10 @@
 .portfolio-page {
+  --portfolio-nav-offset: 7rem;
+
   min-height: 100vh;
   color: #fff;
   background: #000;
+  padding-top: var(--portfolio-nav-offset);
   color-scheme: dark;
   font-family: "Comic Neue", cursive;
 }
@@ -12,8 +15,10 @@
 
 /* NAV */
 .nav {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
+  right: 0;
   z-index: 10;
   display: grid;
   grid-template-columns: 1fr;
@@ -129,7 +134,7 @@
   max-width: 1180px;
   margin: 0 auto;
   padding: 3rem 2rem 4rem;
-  scroll-margin-top: 7.5rem;
+  scroll-margin-top: var(--portfolio-nav-offset);
 }
 
 .hero-copy {
@@ -252,7 +257,7 @@
 .skills-section,
 .contact-section {
   padding: 5rem 2rem;
-  scroll-margin-top: 7.5rem;
+  scroll-margin-top: var(--portfolio-nav-offset);
 }
 
 .projects-section {
@@ -270,7 +275,7 @@
 .project-card {
   scroll-margin-top: 7rem;
   display: grid;
-  grid-template-rows: 250px 1fr auto;
+  grid-template-rows: 250px 1fr;
   overflow: hidden;
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
@@ -291,18 +296,31 @@
   outline: none;
 }
 
+.project-media {
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+  background: #f7f7f8;
+}
+
 .project-card img {
   width: 100%;
   height: 100%;
   display: block;
   object-fit: cover;
   object-position: top center;
-  background: #f7f7f8;
 }
 
 .project-card img.project-image-contained {
   object-fit: contain;
   padding: 1rem;
+}
+
+.project-content {
+  display: grid;
+  grid-template-rows: 1fr auto;
+  min-height: 0;
+  background: #111;
 }
 
 .project-card-copy {
@@ -541,6 +559,7 @@
   .hero-project-chip,
   .currently-building,
   .project-card,
+  .project-content,
   .case-study-grid > div,
   .skill-group {
     border-color: rgba(17, 17, 17, 0.1);
@@ -636,7 +655,11 @@
   }
 
   .project-card {
-    grid-template-rows: 220px 1fr auto;
+    grid-template-rows: 220px 1fr;
+  }
+
+  .project-media {
+    height: 220px;
   }
 }
 
