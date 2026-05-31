@@ -173,38 +173,43 @@ function PortfolioHome() {
                   }
                 }}
               >
-                <img
-                  src={`${PUBLIC}${project.image}`}
-                  alt={project.imageAlt}
-                  className={
-                    project.name === "HabitSquares" ? "project-image-contained" : ""
-                  }
-                />
-                <div className="project-card-copy">
-                  <h3>{project.name}</h3>
-                  <p>{project.description}</p>
-                  <ul className="tech-list" aria-label={`${project.name} tech stack`}>
-                    {project.stack.map((tech) => (
-                      <li key={tech}>{tech}</li>
-                    ))}
-                  </ul>
+                <div className="project-media">
+                  <img
+                    src={`${PUBLIC}${project.image}`}
+                    alt={project.imageAlt}
+                    className={
+                      project.name === "HabitSquares" ? "project-image-contained" : ""
+                    }
+                  />
                 </div>
-                <div className="project-links">
-                  <a
-                    href={project.demoHref}
-                    target={project.demoHref.startsWith("http") ? "_blank" : undefined}
-                    rel="noreferrer"
-                  >
-                    Live Demo
-                  </a>
-                  <a href={project.githubHref} target="_blank" rel="noreferrer">
-                    GitHub
-                  </a>
-                  {project.caseStudyHref && (
-                    <a href={project.caseStudyHref} rel="noreferrer">
-                      Case Study
+
+                <div className="project-content">
+                  <div className="project-card-copy">
+                    <h3>{project.name}</h3>
+                    <p>{project.description}</p>
+                    <ul className="tech-list" aria-label={`${project.name} tech stack`}>
+                      {project.stack.map((tech) => (
+                        <li key={tech}>{tech}</li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className="project-links">
+                    <a
+                      href={project.demoHref}
+                      target={project.demoHref.startsWith("http") ? "_blank" : undefined}
+                      rel="noreferrer"
+                    >
+                      Live Demo
                     </a>
-                  )}
+                    <a href={project.githubHref} target="_blank" rel="noreferrer">
+                      GitHub
+                    </a>
+                    {project.caseStudyHref && (
+                      <a href={project.caseStudyHref} rel="noreferrer">
+                        Case Study
+                      </a>
+                    )}
+                  </div>
                 </div>
               </article>
             ))}
