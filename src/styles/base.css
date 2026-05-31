@@ -72,6 +72,23 @@ svg {
   }
 }
 
+.portfolio-logo-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 54px;
+  height: 34px;
+  border: 1px solid var(--logo-tile-border);
+  border-radius: 8px;
+  background: var(--logo-tile-bg);
+  overflow: hidden;
+}
+
+.portfolio-logo-link .theme-logo {
+  width: 28px;
+  height: 28px;
+}
+
 a {
   color: inherit;
   text-decoration: none;

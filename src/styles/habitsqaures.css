@@ -33,23 +33,6 @@
   width: min(100%, 560px);
 }
 
-.product-logo-link {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 54px;
-  height: 34px;
-  border-radius: 8px;
-  background: var(--logo-tile-bg);
-  border: 1px solid var(--logo-tile-border);
-  overflow: hidden;
-}
-
-.product-logo-link .theme-logo {
-  width: 28px;
-  height: 28px;
-}
-
 .product-nav-links {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -662,12 +645,12 @@
     padding: 0.9rem 1rem 1rem;
   }
 
-  .product-logo-link {
+  .portfolio-logo-link {
     width: 54px;
     height: 34px;
   }
 
-  .product-logo-link .theme-logo {
+  .portfolio-logo-link .theme-logo {
     width: 28px;
     height: 28px;
   }

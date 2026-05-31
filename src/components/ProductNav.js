@@ -1,22 +1,24 @@
-import ThemeLogo from "./ThemeLogo.js";
+import PortfolioLogoLink from "./PortfolioLogoLink.js";
 
-function ProductNav() {
+const defaultLinks = [
+  { href: "#/projects/habitsquares", label: "HabitSquares" },
+  { href: "#/projects/habitsquares/privacy", label: "Privacy" },
+  { href: "#/projects/habitsquares/support", label: "Support" },
+];
+
+function ProductNav({ links = defaultLinks, logoLinkProps }) {
   return (
     <nav className="product-nav">
       <div className="product-logo-row">
-        <a
-          href="/MyPortfolio/"
-          className="product-logo-link"
-          aria-label="John Fuller portfolio home"
-        >
-          <ThemeLogo alt="John Fuller logo" />
-        </a>
+        <PortfolioLogoLink {...logoLinkProps} />
       </div>
 
       <div className="product-nav-links">
-        <a href="#/projects/HabitSquares">HabitSquares</a>
-        <a href="#/projects/HabitSquares/privacy">Privacy</a>
-        <a href="#/projects/HabitSquares/support">Support</a>
+        {links.map(({ href, label }) => (
+          <a href={href} key={`${href}-${label}`}>
+            {label}
+          </a>
+        ))}
       </div>
     </nav>
   );
