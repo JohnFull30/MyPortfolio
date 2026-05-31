@@ -1,0 +1,88 @@
+%PDF-1.4
+1 0 obj
+<< /Type /Catalog /Pages 2 0 R >>
+endobj
+2 0 obj
+<< /Type /Pages /Kids [3 0 R] /Count 1 >>
+endobj
+3 0 obj
+<< /Type /Page /Parent 2 0 R /MediaBox [0 0 612 792] /Resources << /Font << /F1 4 0 R >> >> /Contents 5 0 R >>
+endobj
+4 0 obj
+<< /Type /Font /Subtype /Type1 /BaseFont /Helvetica >>
+endobj
+5 0 obj
+<< /Length 1441 >>
+stream
+BT
+/F1 22 Tf
+72 760 Td
+(John Fuller) Tj
+/F1 12 Tf
+0 -30 Td
+(Frontend Developer) Tj
+0 -18 Td
+(johnathanfuller0@gmail.com | github.com/JohnFull30 | linkedin.com/in/john-fuller-03044322a) Tj
+0 -10 Td
+/F1 10 Tf
+() Tj
+0 -18 Td
+/F1 14 Tf
+(Summary) Tj
+0 -18 Td
+/F1 10 Tf
+(Frontend developer building clean, responsive, product-focused web and mobile experiences.) Tj
+0 -18 Td
+/F1 10 Tf
+(I design and build modern interfaces with React, Material UI, SwiftUI, and product thinking.) Tj
+0 -10 Td
+/F1 10 Tf
+() Tj
+0 -18 Td
+/F1 14 Tf
+(Featured Projects) Tj
+0 -18 Td
+/F1 10 Tf
+(HabitSquares - SwiftUI habit tracker connecting Apple Reminders with visual progress tracking.) Tj
+0 -18 Td
+/F1 10 Tf
+(Holistic Herbs - E-commerce experience using React, Material UI, Supabase, and product browsing flows.) Tj
+0 -18 Td
+/F1 10 Tf
+(GoTobago Tours - Responsive travel product concept for tours, local context, and booking intent.) Tj
+0 -18 Td
+/F1 10 Tf
+(Gender Reveal Countdown - Polished countdown app/demo with event-driven interaction.) Tj
+0 -10 Td
+/F1 10 Tf
+() Tj
+0 -18 Td
+/F1 14 Tf
+(Skills) Tj
+0 -18 Td
+/F1 10 Tf
+(Frontend: React, JavaScript, Material UI, HTML, CSS, Responsive Design) Tj
+0 -18 Td
+/F1 10 Tf
+(Mobile: SwiftUI, iOS, WidgetKit, EventKit, Core Data, CloudKit) Tj
+0 -18 Td
+/F1 10 Tf
+(Backend / Tools: Supabase, GitHub Pages, Git, VS Code, Xcode) Tj
+0 -18 Td
+/F1 10 Tf
+(Design: UI layout, product thinking, Photoshop, branding, landing pages) Tj
+ET
+endstream
+endobj
+xref
+0 6
+0000000000 65535 f 
+0000000009 00000 n 
+0000000058 00000 n 
+0000000115 00000 n 
+0000000241 00000 n 
+0000000311 00000 n 
+trailer << /Size 6 /Root 1 0 R >>
+startxref
+1804
+%%EOF
