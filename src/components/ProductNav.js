@@ -8,18 +8,18 @@ const defaultLinks = [
 
 function ProductNav({ links = defaultLinks, logoLinkProps }) {
   return (
-    <nav className="product-nav">
+    <nav className="product-nav" aria-label="HabitSquares navigation">
       <div className="product-logo-row">
         <PortfolioLogoLink {...logoLinkProps} />
       </div>
 
-      <div className="product-nav-links">
+      <ul className="product-nav-links nav-list">
         {links.map(({ href, label }) => (
-          <a href={href} key={`${href}-${label}`}>
-            {label}
-          </a>
+          <li key={`${href}-${label}`}>
+            <a href={href}>{label}</a>
+          </li>
         ))}
-      </div>
+      </ul>
     </nav>
   );
 }

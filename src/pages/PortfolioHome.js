@@ -137,7 +137,12 @@ function PortfolioHome() {
             A SwiftUI habit tracker that connects Apple Reminders with
             GitHub-style visual progress tracking.
           </p>
-          <a href="#/projects/habitsquares">View the case study</a>
+          <a
+            href="#/projects/habitsquares"
+            className="portfolio-button portfolio-button--accent portfolio-button--fit"
+          >
+            View the case study
+          </a>
         </section>
 
         <section id="projects" className="projects-section">
@@ -196,16 +201,26 @@ function PortfolioHome() {
                   <div className="project-links">
                     <a
                       href={project.demoHref}
+                      className="portfolio-button portfolio-button--accent portfolio-button--small"
                       target={project.demoHref.startsWith("http") ? "_blank" : undefined}
                       rel="noreferrer"
                     >
                       Live Demo
                     </a>
-                    <a href={project.githubHref} target="_blank" rel="noreferrer">
+                    <a
+                      href={project.githubHref}
+                      className="portfolio-button portfolio-button--accent portfolio-button--small"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
                       GitHub
                     </a>
                     {project.caseStudyHref && (
-                      <a href={project.caseStudyHref} rel="noreferrer">
+                      <a
+                        href={project.caseStudyHref}
+                        className="portfolio-button portfolio-button--accent portfolio-button--small"
+                        rel="noreferrer"
+                      >
                         Case Study
                       </a>
                     )}
@@ -296,9 +311,15 @@ function PortfolioHome() {
             opportunities.
           </p>
           <div className="contact-buttons">
-            <a href="mailto:johnathanfuller0@gmail.com">Email Me</a>
+            <a
+              href="mailto:johnathanfuller0@gmail.com"
+              className="portfolio-button portfolio-button--accent"
+            >
+              Email Me
+            </a>
             <a
               href="https://github.com/JohnFull30"
+              className="portfolio-button portfolio-button--accent"
               target="_blank"
               rel="noreferrer"
             >
@@ -306,6 +327,7 @@ function PortfolioHome() {
             </a>
             <a
               href="https://www.linkedin.com/in/john-fuller-03044322a/"
+              className="portfolio-button portfolio-button--accent"
               target="_blank"
               rel="noreferrer"
             >
@@ -313,6 +335,7 @@ function PortfolioHome() {
             </a>
             <a
               href={`${PUBLIC}/John-Fuller-Resume.pdf`}
+              className="portfolio-button portfolio-button--accent"
               target="_blank"
               rel="noreferrer"
             >
