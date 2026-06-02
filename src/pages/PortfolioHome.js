@@ -14,15 +14,15 @@ const featuredProjects = [
     caseStudyHref: "#case-study",
   },
   {
-    id: "holistic-herbs-card",
-    name: "Holistic Herbs",
+    id: "gender-reveal-card",
+    name: "Gender Reveal Countdown",
     description:
-      "A polished e-commerce experience for a wellness brand, focused on product browsing and clean shopping flows.",
-    stack: ["React", "Material UI", "Supabase", "E-commerce"],
-    image: "/holistic-herbs.jpg",
-    imageAlt: "Holistic Herbs storefront preview",
-    demoHref: "https://johnfull30.github.io/holistic-herbs/",
-    githubHref: "https://github.com/JohnFull30/holistic-herbs",
+      "A focused countdown app/demo with a polished moment-based interface and clear event-driven interaction.",
+    stack: ["JavaScript", "HTML", "CSS", "UI Design"],
+    image: "/countdown.jpg",
+    imageAlt: "Gender Reveal Countdown app preview",
+    demoHref: "https://johnfull30.github.io/countdown/",
+    githubHref: "https://github.com/JohnFull30/countdown",
   },
   {
     id: "gotobago-card",
@@ -36,15 +36,15 @@ const featuredProjects = [
     githubHref: "https://github.com/JohnFull30/gt",
   },
   {
-    id: "gender-reveal-card",
-    name: "Gender Reveal Countdown",
+    id: "holistic-herbs-card",
+    name: "Holistic Herbs",
     description:
-      "A focused countdown app/demo with a polished moment-based interface and clear event-driven interaction.",
-    stack: ["JavaScript", "HTML", "CSS", "UI Design"],
-    image: "/countdown.jpg",
-    imageAlt: "Gender Reveal Countdown app preview",
-    demoHref: "https://johnfull30.github.io/countdown/",
-    githubHref: "https://github.com/JohnFull30/countdown",
+      "A polished e-commerce experience for a wellness brand, focused on product browsing and clean shopping flows.",
+    stack: ["React", "Material UI", "Supabase", "E-commerce"],
+    image: "/holistic-herbs.jpg",
+    imageAlt: "Holistic Herbs storefront preview",
+    demoHref: "https://johnfull30.github.io/holistic-herbs/",
+    githubHref: "https://github.com/JohnFull30/holistic-herbs",
   },
 ];
 
