@@ -1,7 +1,7 @@
 import ThemeLogo from "./ThemeLogo.js";
 
 function PortfolioLogoLink({
-  href = "/MyPortfolio/",
+  href = "/",
   ariaLabel = "John Fuller portfolio home",
   logoAlt = "John Fuller logo",
   className = "",
