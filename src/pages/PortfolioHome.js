@@ -2,6 +2,15 @@ import PortfolioLogoLink from "../components/PortfolioLogoLink.js";
 
 const featuredProjects = [
   {
+    id: "routeplanner-card",
+    name: "Route Planner",
+    description:
+      "A route-planning project from Pierre Fuller Labs. Explore the project overview, with more details coming soon.",
+    stack: ["Route Planning"],
+    demoHref: "#/projects/routeplanner",
+    demoLabel: "View Project",
+  },
+  {
     id: "habitsquares-card",
     name: "HabitSquares",
     description:
@@ -173,7 +182,7 @@ function PortfolioHome() {
                   }
                 }}
               >
-                <div className="project-media">
+                {project.image && <div className="project-media">
                   <img
                     src={`${PUBLIC}${project.image}`}
                     alt={project.imageAlt}
@@ -181,7 +190,7 @@ function PortfolioHome() {
                       project.name === "HabitSquares" ? "project-image-contained" : ""
                     }
                   />
-                </div>
+                </div>}
 
                 <div className="project-content">
                   <div className="project-card-copy">
@@ -199,11 +208,11 @@ function PortfolioHome() {
                       target={project.demoHref.startsWith("http") ? "_blank" : undefined}
                       rel="noreferrer"
                     >
-                      Live Demo
+                      {project.demoLabel || "Live Demo"}
                     </a>
-                    <a href={project.githubHref} target="_blank" rel="noreferrer">
+                    {project.githubHref && <a href={project.githubHref} target="_blank" rel="noreferrer">
                       GitHub
-                    </a>
+                    </a>}
                     {project.caseStudyHref && (
                       <a href={project.caseStudyHref} rel="noreferrer">
                         Case Study

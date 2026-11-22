@@ -2,6 +2,7 @@ import { useEffect, useLayoutEffect, useState } from "react";
 import "./App.css";
 
 import PortfolioHome from "./pages/PortfolioHome.js";
+import RoutePlannerPage from "./pages/RoutePlannerPage.js";
 import HabitSquaresPage from "./pages/HabitSquaresPage.js";
 import HabitSquaresPrivacyPage from "./pages/HabitSquaresPrivacyPage.js";
 import HabitSquaresSupportPage from "./pages/HabitSquaresSupportPage.js";
@@ -60,7 +61,7 @@ function App() {
   }, []);
 
   useLayoutEffect(() => {
-    if (isHabitSquaresRoute) {
+    if (isHabitSquaresRoute || normalizedRoute.startsWith("/projects/routeplanner")) {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }
   }, [isHabitSquaresRoute, normalizedRoute]);
@@ -90,6 +91,10 @@ function App() {
         <BackToTopButton />
       </>
     );
+  }
+
+  if (normalizedRoute === "/projects/routeplanner") {
+    return <><RoutePlannerPage /><BackToTopButton /></>;
   }
 
   return <PortfolioHome />;

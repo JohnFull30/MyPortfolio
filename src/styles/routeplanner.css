@@ -1,0 +1,29 @@
+.route-planner-visual {
+  --page-label-color: #fff;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--surface-border);
+  border-radius: 28px;
+  background: var(--surface);
+  box-shadow: 0 24px 64px var(--card-shadow-soft);
+}
+
+.route-planner-visual svg { width: 100%; }
+
+.route-planner-visual figcaption {
+  padding: 1.25rem;
+  border-top: 1px solid var(--surface-border);
+  color: var(--text-secondary);
+  text-align: center;
+  font-size: 0.85rem;
+}
+
+.route-planner-details > p:last-child {
+  max-width: 620px;
+  color: var(--text-secondary);
+  line-height: 1.7;
+}
+
+@media (prefers-color-scheme: dark) {
+  .route-planner-visual { --page-label-color: #111827; }
+}
