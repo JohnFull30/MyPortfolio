@@ -3,6 +3,7 @@ import "./App.css";
 
 import PortfolioHome from "./pages/PortfolioHome.js";
 import RoutePlannerPage from "./pages/RoutePlannerPage.js";
+import { RoutePlannerPrivacyPage, RoutePlannerSupportPage } from "./pages/RoutePlannerPages.js";
 import HabitSquaresPage from "./pages/HabitSquaresPage.js";
 import HabitSquaresPrivacyPage from "./pages/HabitSquaresPrivacyPage.js";
 import HabitSquaresSupportPage from "./pages/HabitSquaresSupportPage.js";
@@ -118,8 +119,14 @@ function App() {
     );
   }
 
-  if (normalizedRoute === "/projects/routeplanner") {
-    return <><RoutePlannerPage /><BackToTopButton /></>;
+  const routePlannerPages = {
+    "/projects/routeplanner": RoutePlannerPage,
+    "/projects/routeplanner/privacy": RoutePlannerPrivacyPage,
+    "/projects/routeplanner/support": RoutePlannerSupportPage,
+  };
+  const RoutePlannerRoute = routePlannerPages[normalizedRoute];
+  if (RoutePlannerRoute) {
+    return <><RoutePlannerRoute /><BackToTopButton /></>;
   }
 
   return <PortfolioHome />;
