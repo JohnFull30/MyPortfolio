@@ -424,3 +424,25 @@
     transition: none;
   }
 }
+
+
+/* Legal pages reuse the shared layout while keeping Route Planner's green brand. */
+.route-planner-page .legal-content h2 {
+  margin: 0.5rem 0;
+  color: var(--text-strong);
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+}
+.route-planner-page .legal-content a,
+.route-planner-page .legal-date a {
+  color: #087a57;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (prefers-color-scheme: dark) {
+  .route-planner-page .legal-content a,
+  .route-planner-page .legal-date a {
+    color: #6fe8b8;
+  }
+}
