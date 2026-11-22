@@ -774,3 +774,20 @@
     font-size: 1rem;
   }
 }
+
+/* Leave On Time reuses the existing product and legal page components. */
+.leave-on-time-page .legal-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+.leave-on-time-page a:focus-visible {
+  outline: 3px solid #0a84ff;
+  outline-offset: 4px;
+}
+@media (max-width: 700px) {
+  .leave-on-time-page .product-nav-links {
+    grid-template-columns: 1.5fr 1fr 1fr;
+  }
+}

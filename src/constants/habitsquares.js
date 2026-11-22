@@ -1,4 +1,4 @@
-export const habitsquaresEmail = "habitsquaresapp@gmail.com";
+export const habitsquaresEmail = "support@pierrefullerlabs.com";
 
 export const habitSquaresFeatures = [
   "GitHub-style habit heatmaps",

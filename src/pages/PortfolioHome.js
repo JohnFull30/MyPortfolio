@@ -11,6 +11,17 @@ const featuredProjects = [
     demoLabel: "View Project",
   },
   {
+    id: "leaveontime-card",
+    name: "Leave On Time",
+    description:
+      "In development. Plan driving departures from selected Calendar appointments with a saved starting address, Apple Maps driving estimates and a travel buffer.",
+    stack: ["Calendar", "Apple Maps", "Live Activities"],
+    demoHref: "#/projects/leaveontime",
+    demoLabel: "View App",
+    image: "/leaveontime-icon.png",
+    imageAlt: "Leave On Time clock and departure arrow app icon",
+  },
+  {
     id: "habitsquares-card",
     name: "HabitSquares",
     description:
@@ -79,7 +90,13 @@ const stackGroups = [
   },
   {
     title: "Design",
-    items: ["UI Layout", "Product Thinking", "Photoshop", "Branding", "Landing Pages"],
+    items: [
+      "UI Layout",
+      "Product Thinking",
+      "Photoshop",
+      "Branding",
+      "Landing Pages",
+    ],
   },
 ];
 
@@ -137,7 +154,10 @@ function PortfolioHome() {
           </div>
         </section>
 
-        <section className="currently-building" aria-labelledby="building-title">
+        <section
+          className="currently-building"
+          aria-labelledby="building-title"
+        >
           <div>
             <p className="section-kicker">Currently building</p>
             <h2 id="building-title">HabitSquares</h2>
@@ -147,6 +167,21 @@ function PortfolioHome() {
             GitHub-style visual progress tracking.
           </p>
           <a href="#/projects/habitsquares">View the case study</a>
+        </section>
+
+        <section
+          className="currently-building"
+          aria-labelledby="leaveontime-building-title"
+        >
+          <div>
+            <p className="section-kicker">In development</p>
+            <h2 id="leaveontime-building-title">Leave On Time</h2>
+          </div>
+          <p>
+            Plan driving departures from Calendar appointments with a saved
+            starting address, Apple Maps estimates and a travel buffer.
+          </p>
+          <a href="#/projects/leaveontime">View the app</a>
         </section>
 
         <section id="projects" className="projects-section">
@@ -163,7 +198,7 @@ function PortfolioHome() {
                 key={project.name}
                 role="link"
                 tabIndex="0"
-                aria-label={`Open ${project.name} live demo`}
+                aria-label={`Open ${project.name}${project.demoLabel ? " overview" : " live demo"}`}
                 onClick={(event) => {
                   if (event.target.closest("a")) {
                     return;
@@ -182,21 +217,28 @@ function PortfolioHome() {
                   }
                 }}
               >
-                {project.image && <div className="project-media">
-                  <img
-                    src={`${PUBLIC}${project.image}`}
-                    alt={project.imageAlt}
-                    className={
-                      project.name === "HabitSquares" ? "project-image-contained" : ""
-                    }
-                  />
-                </div>}
+                {project.image && (
+                  <div className="project-media">
+                    <img
+                      src={`${PUBLIC}${project.image}`}
+                      alt={project.imageAlt}
+                      className={
+                        ["HabitSquares", "Leave On Time"].includes(project.name)
+                          ? "project-image-contained"
+                          : ""
+                      }
+                    />
+                  </div>
+                )}
 
                 <div className="project-content">
                   <div className="project-card-copy">
                     <h3>{project.name}</h3>
                     <p>{project.description}</p>
-                    <ul className="tech-list" aria-label={`${project.name} tech stack`}>
+                    <ul
+                      className="tech-list"
+                      aria-label={`${project.name} tech stack`}
+                    >
                       {project.stack.map((tech) => (
                         <li key={tech}>{tech}</li>
                       ))}
@@ -205,14 +247,24 @@ function PortfolioHome() {
                   <div className="project-links">
                     <a
                       href={project.demoHref}
-                      target={project.demoHref.startsWith("http") ? "_blank" : undefined}
+                      target={
+                        project.demoHref.startsWith("http")
+                          ? "_blank"
+                          : undefined
+                      }
                       rel="noreferrer"
                     >
                       {project.demoLabel || "Live Demo"}
                     </a>
-                    {project.githubHref && <a href={project.githubHref} target="_blank" rel="noreferrer">
-                      GitHub
-                    </a>}
+                    {project.githubHref && (
+                      <a
+                        href={project.githubHref}
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        GitHub
+                      </a>
+                    )}
                     {project.caseStudyHref && (
                       <a href={project.caseStudyHref} rel="noreferrer">
                         Case Study

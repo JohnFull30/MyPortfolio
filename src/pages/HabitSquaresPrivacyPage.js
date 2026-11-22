@@ -45,7 +45,7 @@ function HabitSquaresPrivacyPage() {
 
           <p>
             Contact:{" "}
-            <a href={`mailto:${habitsquaresEmail}`}>{habitsquaresEmail}</a>
+            <a href={`mailto:${habitsquaresEmail}?subject=HabitSquares%20Privacy`}>{habitsquaresEmail}</a>
           </p>
 
           <p>This policy may be updated as the app changes.</p>

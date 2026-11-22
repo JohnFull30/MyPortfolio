@@ -685,3 +685,33 @@
     bottom: 2rem;
   }
 }
+
+/* App showcase artwork uses each app's existing assets. */
+#leaveontime-card .project-media {
+  display: grid;
+  place-items: center;
+  background: radial-gradient(ellipse at 65% 20%, #104861, transparent 70%), #04152f;
+}
+#leaveontime-card img.project-image-contained {
+  width: 156px;
+  height: 156px;
+  padding: 0;
+  border-radius: 34px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
+}
+#habitsquares-card .project-media {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background: radial-gradient(ellipse at 50% 80%, #ccebd8, transparent 75%), #eef3ef;
+}
+#habitsquares-card img.project-image-contained {
+  flex: 0 0 auto;
+  width: 190px;
+  height: auto;
+  max-height: none;
+  margin-top: 22px;
+  padding: 0;
+  border-radius: 22px 22px 0 0;
+  box-shadow: 0 12px 35px rgba(14, 50, 29, 0.16);
+}

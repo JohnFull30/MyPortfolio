@@ -12,7 +12,7 @@ function HabitSquaresSupportPage() {
         <h1>HabitSquares Support</h1>
         <p className="legal-date">
           Need help? Contact{" "}
-          <a href={`mailto:${habitsquaresEmail}`}>{habitsquaresEmail}</a>.
+          <a href={`mailto:${habitsquaresEmail}?subject=HabitSquares%20Support`}>{habitsquaresEmail}</a>.
         </p>
 
         <div className="support-list">

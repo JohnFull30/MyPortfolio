@@ -7,6 +7,12 @@ import HabitSquaresPage from "./pages/HabitSquaresPage.js";
 import HabitSquaresPrivacyPage from "./pages/HabitSquaresPrivacyPage.js";
 import HabitSquaresSupportPage from "./pages/HabitSquaresSupportPage.js";
 
+import {
+  LeaveOnTimePage,
+  LeaveOnTimeSupportPage,
+  LeaveOnTimePrivacyPage,
+} from "./pages/LeaveOnTimePages";
+
 function getRouteFromHash() {
   const hash = window.location.hash;
 
@@ -61,7 +67,11 @@ function App() {
   }, []);
 
   useLayoutEffect(() => {
-    if (isHabitSquaresRoute || normalizedRoute.startsWith("/projects/routeplanner")) {
+    if (
+      isHabitSquaresRoute ||
+      normalizedRoute.startsWith("/projects/leaveontime") ||
+      normalizedRoute.startsWith("/projects/routeplanner")
+    ) {
       window.scrollTo({ top: 0, left: 0, behavior: "auto" });
     }
   }, [isHabitSquaresRoute, normalizedRoute]);
@@ -88,6 +98,21 @@ function App() {
     return (
       <>
         <HabitSquaresSupportPage />
+        <BackToTopButton />
+      </>
+    );
+  }
+
+  const leaveOnTimePages = {
+    "/projects/leaveontime": LeaveOnTimePage,
+    "/projects/leaveontime/support": LeaveOnTimeSupportPage,
+    "/projects/leaveontime/privacy": LeaveOnTimePrivacyPage,
+  };
+  const LeaveOnTimeRoute = leaveOnTimePages[normalizedRoute];
+  if (LeaveOnTimeRoute) {
+    return (
+      <>
+        <LeaveOnTimeRoute />
         <BackToTopButton />
       </>
     );

@@ -1,0 +1,111 @@
+/* App-specific palette; layout and components remain shared with HabitSquares. */
+.leave-on-time-page {
+  --page-bg:
+    radial-gradient(circle at top left, #d9f5f4 0, transparent 36rem),
+    linear-gradient(180deg, #f2f3f8, #fff 60%, #edf6f7);
+  --nav-bg: rgba(244, 247, 251, 0.94);
+  --text-primary: #14243b;
+  --text-strong: #061b3b;
+  --text-secondary: #526377;
+  --text-muted: #526377;
+  --legal-button-bg: #08244a;
+  --legal-button-bg-hover: #123b63;
+  --legal-button-border-hover: #007b80;
+  --back-to-top-hover-bg: #006d73;
+}
+.leave-on-time-page .eyebrow,
+.leave-on-time-page .step-card span,
+.leave-on-time-page .text-button {
+  color: #00747a;
+}
+.leave-on-time-page .primary-button {
+  background: #006d73;
+  box-shadow: 0 16px 35px rgba(0, 109, 115, 0.18);
+}
+.leave-on-time-page .feature-dot {
+  background: #00a9af;
+  box-shadow: 0 0 0 8px rgba(0, 169, 175, 0.12);
+}
+.leave-on-time-page .privacy-band,
+.leave-on-time-page .product-cta {
+  background:
+    radial-gradient(
+      circle at top right,
+      rgba(0, 185, 190, 0.12),
+      transparent 24rem
+    ),
+    var(--surface);
+}
+.leave-on-time-icon {
+  width: 88px;
+  height: 88px;
+  border-radius: 23px;
+  margin-bottom: 1.75rem;
+}
+.leave-on-time-preview {
+  margin: 0;
+  justify-self: center;
+  text-align: center;
+  min-width: 0;
+}
+.leave-on-time-preview img {
+  width: min(100%, 300px);
+  margin: 0 auto;
+  border-radius: 32px;
+  border: 1px solid var(--surface-border);
+  box-shadow: 0 24px 70px var(--card-shadow);
+}
+.leave-on-time-preview figcaption {
+  max-width: 300px;
+  margin: 1rem auto 0;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+.leave-on-time-page .legal-content h2 {
+  font-size: 1.25rem;
+  letter-spacing: -0.025em;
+  margin: 0.5rem 0;
+}
+.leave-on-time-page .legal-content a,
+.leave-on-time-page .legal-date a {
+  color: #006d73;
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+@media (prefers-color-scheme: dark) {
+  .leave-on-time-page {
+    --page-bg:
+      radial-gradient(circle at top left, #083c4b 0, transparent 36rem),
+      linear-gradient(180deg, #04132b, #081b34 60%, #09152a);
+    --nav-bg: rgba(4, 19, 43, 0.94);
+    --text-primary: #eaf2fc;
+    --text-strong: #fff;
+    --text-secondary: #b9c9db;
+    --text-muted: #b9c9db;
+    --surface: rgba(15, 35, 59, 0.84);
+    --surface-soft: rgba(19, 42, 65, 0.84);
+    --surface-strong: #15334c;
+    --legal-button-bg: #153b53;
+    --legal-button-bg-hover: #205268;
+  }
+  .leave-on-time-page .eyebrow,
+  .leave-on-time-page .step-card span,
+  .leave-on-time-page .text-button,
+  .leave-on-time-page .legal-content a,
+  .leave-on-time-page .legal-date a {
+    color: #55e1df;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .leave-on-time-page a {
+    transition: none;
+  }
+}
+.leave-on-time-page .product-hero {
+  padding-top: clamp(2rem, 4vw, 3rem);
+  padding-bottom: clamp(2rem, 4vw, 3rem);
+}
+.leave-on-time-preview img { width: min(100%, 240px); }
+.leave-on-time-icon { width: 64px; height: 64px; border-radius: 17px; margin-bottom: 1.25rem; }
