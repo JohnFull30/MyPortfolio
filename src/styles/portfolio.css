@@ -717,13 +717,7 @@
 }
 
 
-/* Route Planner uses its own forest green and mint app palette. */
-#routeplanner-card.project-card:hover,
-#routeplanner-card.project-card:focus-visible {
-  border-color: rgba(31, 201, 137, 0.55);
-  box-shadow: 0 0 28px rgba(31, 201, 137, 0.17);
-}
-
+/* Route Planner app artwork. Card accents inherit the portfolio palette. */
 #routeplanner-card .project-media {
   display: grid;
   place-items: center;
@@ -740,17 +734,6 @@
   box-shadow: 0 20px 45px rgba(0, 0, 0, 0.32);
 }
 
-#routeplanner-card .project-card h3,
-#routeplanner-card .project-links a {
-  color: #34c996;
-}
-
-#routeplanner-card .tech-list li {
-  border-color: rgba(52, 201, 150, 0.38);
-  color: #6ce3b6;
-  background: rgba(52, 201, 150, 0.1);
-}
-
 @media (prefers-color-scheme: light) {
   #routeplanner-card .project-media {
     background:
@@ -762,14 +745,4 @@
     box-shadow: 0 16px 36px rgba(13, 76, 53, 0.2);
   }
 
-  #routeplanner-card .project-card h3,
-  #routeplanner-card .project-links a {
-    color: #087a57;
-  }
-
-  #routeplanner-card .tech-list li {
-    border-color: rgba(8, 122, 87, 0.26);
-    color: #087a57;
-    background: rgba(21, 185, 129, 0.1);
-  }
 }
