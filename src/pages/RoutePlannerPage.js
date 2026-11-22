@@ -1,3 +1,4 @@
+import BetaInterestForm, { scrollToBetaInterest } from "../components/BetaInterestForm";
 import ProductNav from "../components/ProductNav";
 import StepCard from "../components/StepCard";
 
@@ -127,6 +128,7 @@ export default function RoutePlannerPage() {
             a map, and open each destination in Maps when it’s time to go.
           </p>
           <div className="product-actions">
+            <button type="button" className="primary-button" onClick={scrollToBetaInterest}>Request beta access</button>
             <a className="primary-button" href="#/projects/routeplanner/support">
               Get support
             </a>
@@ -137,6 +139,8 @@ export default function RoutePlannerPage() {
         </div>
         <RoutePlannerPreview />
       </section>
+
+      <BetaInterestForm appName="Route Planner" recipient="support@pierrefullerlabs.com" />
 
       <section className="product-section split-section route-planner-how">
         <div>

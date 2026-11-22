@@ -1,3 +1,4 @@
+import BetaInterestForm, { scrollToBetaInterest } from "../components/BetaInterestForm";
 import ProductNav from "../components/ProductNav";
 import SupportItem from "../components/SupportItem";
 import StepCard from "../components/StepCard";
@@ -48,6 +49,7 @@ export function LeaveOnTimePage() {
             estimates and a travel buffer.
           </p>
           <div className="product-actions">
+            <button type="button" className="primary-button" onClick={scrollToBetaInterest}>Request beta access</button>
             <a className="primary-button" href={`${leaveOnTimeRoot}/support`}>
               Support
             </a>
@@ -68,6 +70,7 @@ export function LeaveOnTimePage() {
           </figcaption>
         </figure>
       </section>
+      <BetaInterestForm appName="Leave On Time" recipient={supportEmail} />
       <section className="product-section split-section">
         <div>
           <p className="eyebrow">How it works</p>

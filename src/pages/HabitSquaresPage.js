@@ -1,3 +1,4 @@
+import BetaInterestForm, { scrollToBetaInterest } from "../components/BetaInterestForm";
 import ProductNav from "../components/ProductNav";
 import HeatmapPreview from "../components/HeatmapPreview";
 import PreviewPanel from "../components/PreviewPanel";
@@ -36,12 +37,9 @@ function HabitSquaresPage() {
             <a href="#demo" className="primary-button">
               View Demo
             </a>
-            <a
-              href={`mailto:${habitsquaresEmail}?subject=HabitSquares TestFlight Access`}
-              className="secondary-button"
-            >
-              Request TestFlight Access
-            </a>
+            <button type="button" onClick={scrollToBetaInterest} className="secondary-button">
+              Request beta access
+            </button>
             <a href="#/projects/habitsquares/privacy" className="text-button">
               Privacy Policy
             </a>
@@ -70,6 +68,7 @@ function HabitSquaresPage() {
           </div>
         </div>
       </section>
+      <BetaInterestForm appName="HabitSquares" recipient={habitsquaresEmail} />
 
       <section id="demo" className="product-section">
         <div className="section-heading">
@@ -210,12 +209,9 @@ function HabitSquaresPage() {
         </p>
 
         <div className="product-actions centered">
-          <a
-            href={`mailto:${habitsquaresEmail}?subject=HabitSquares TestFlight Access`}
-            className="primary-button"
-          >
-            Contact for TestFlight Access
-          </a>
+          <button type="button" onClick={scrollToBetaInterest} className="primary-button">
+            Request beta access
+          </button>
           <a
             href="#/projects/habitsquares/support"
             className="secondary-button"
