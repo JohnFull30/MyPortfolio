@@ -2,8 +2,6 @@ import ProductNav from "../components/ProductNav";
 import StepCard from "../components/StepCard";
 
 const PUBLIC = process.env.PUBLIC_URL;
-const contactHref =
-  "mailto:support@pierrefullerlabs.com?subject=Route%20Planner";
 
 function RoutePlannerPreview() {
   return (
