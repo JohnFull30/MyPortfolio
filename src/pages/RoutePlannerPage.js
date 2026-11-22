@@ -2,8 +2,6 @@ import ProductNav from "../components/ProductNav";
 import StepCard from "../components/StepCard";
 
 const PUBLIC = process.env.PUBLIC_URL;
-const contactHref =
-  "mailto:support@pierrefullerlabs.com?subject=Route%20Planner";
 
 function RoutePlannerPreview() {
   return (
@@ -105,7 +103,8 @@ export default function RoutePlannerPage() {
         links={[
           { href: "#/", label: "Portfolio" },
           { href: "#/projects/routeplanner", label: "Route Planner" },
-          { href: contactHref, label: "Contact" },
+          { href: "#/projects/routeplanner/privacy", label: "Privacy" },
+          { href: "#/projects/routeplanner/support", label: "Support" },
         ]}
       />
 
@@ -128,11 +127,11 @@ export default function RoutePlannerPage() {
             a map, and open each destination in Maps when it’s time to go.
           </p>
           <div className="product-actions">
-            <a className="primary-button" href={contactHref}>
-              Contact about the app
+            <a className="primary-button" href="#/projects/routeplanner/support">
+              Get support
             </a>
-            <a className="secondary-button" href="#/">
-              Explore the portfolio
+            <a className="secondary-button" href="#/projects/routeplanner/privacy">
+              Privacy policy
             </a>
           </div>
         </div>
@@ -188,11 +187,11 @@ export default function RoutePlannerPage() {
           information will be added as the app moves forward.
         </p>
         <div className="product-actions">
-          <a className="primary-button" href={contactHref}>
-            Contact
+          <a className="primary-button" href="#/projects/routeplanner/support">
+            Contact support
           </a>
-          <a className="secondary-button" href="#/">
-            Back to the portfolio
+          <a className="secondary-button" href="#/projects/routeplanner/privacy">
+            Privacy policy
           </a>
         </div>
       </section>
