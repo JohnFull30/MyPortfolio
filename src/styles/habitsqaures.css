@@ -43,7 +43,8 @@
   grid-template-columns: repeat(3, minmax(0, 1fr));
   align-items: center;
   justify-items: center;
-  gap: clamp(2rem, 10vw, 8rem);
+  column-gap: clamp(2rem, 10vw, 8rem);
+  row-gap: 0.85rem;
   width: min(100%, 560px);
   min-width: 0;
 }

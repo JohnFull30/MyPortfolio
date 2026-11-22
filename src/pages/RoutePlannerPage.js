@@ -102,7 +102,6 @@ export default function RoutePlannerPage() {
       <ProductNav
         logoLinkProps={{ href: "#/" }}
         links={[
-          { href: "#/", label: "Portfolio" },
           { href: "#/projects/routeplanner", label: "Route Planner" },
           { href: "#/projects/routeplanner/privacy", label: "Privacy" },
           { href: "#/projects/routeplanner/support", label: "Support" },
