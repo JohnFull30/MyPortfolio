@@ -5,10 +5,12 @@ const featuredProjects = [
     id: "routeplanner-card",
     name: "Route Planner",
     description:
-      "A route-planning project from Pierre Fuller Labs. Explore the project overview, with more details coming soon.",
-    stack: ["Route Planning"],
+      "Plan a multi-stop workday, review the route on a map, and open each destination in Maps.",
+    stack: ["Daily Stops", "Route Map", "Map Navigation"],
     demoHref: "#/projects/routeplanner",
     demoLabel: "View Project",
+    image: "/routeplanner-icon.svg",
+    imageAlt: "Route Planner app icon with a connected route mark on a deep green tile",
   },
   {
     id: "leaveontime-card",
@@ -223,7 +225,7 @@ function PortfolioHome() {
                       src={`${PUBLIC}${project.image}`}
                       alt={project.imageAlt}
                       className={
-                        ["HabitSquares", "Leave On Time"].includes(project.name)
+                        ["HabitSquares", "Leave On Time", "Route Planner"].includes(project.name)
                           ? "project-image-contained"
                           : ""
                       }

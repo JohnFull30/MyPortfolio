@@ -1,4 +1,101 @@
 import ProductNav from "../components/ProductNav";
+import StepCard from "../components/StepCard";
+
+const PUBLIC = process.env.PUBLIC_URL;
+const contactHref =
+  "mailto:support@pierrefullerlabs.com?subject=Route%20Planner";
+
+function RoutePlannerPreview() {
+  return (
+    <figure className="route-planner-preview">
+      <div className="route-preview-screen" aria-hidden="true">
+        <header className="route-preview-appbar">
+          <img
+            src={`${PUBLIC}/routeplanner-icon.svg`}
+            alt=""
+            width="44"
+            height="44"
+          />
+          <div>
+            <strong>Route Planner</strong>
+            <span>Day plan · Saved</span>
+          </div>
+          <span className="route-preview-saved">✓ Saved</span>
+        </header>
+
+        <div className="route-preview-date">
+          <strong>Monday, Nov 23</strong>
+          <span>Change&nbsp; ›</span>
+        </div>
+
+        <section className="route-preview-ready">
+          <p className="route-preview-kicker">Route ready</p>
+          <h2>Ready when you are.</h2>
+          <p className="route-preview-copy">
+            5 destinations in your chosen order.
+          </p>
+          <div className="route-preview-map">
+            <svg viewBox="0 0 560 230" role="img">
+              <title>Sample route connecting five stops</title>
+              <path
+                className="route-map-street"
+                d="M12 44h120l36 42h86l28-40h106l36 42h126M18 188h110l36-40h86l38 34h90l46-40h118M82 16v54l38 34v70M285 12v54l32 32v64M464 16v48l-30 36v68"
+              />
+              <path
+                className="route-map-line"
+                d="M72 178V130q0-18 18-18h112q18 0 18-18V73q0-18 18-18h89q18 0 18 18v36q0 18 18 18h78q18 0 18-18V72"
+              />
+              {[
+                [72, 178],
+                [220, 94],
+                [329, 73],
+                [365, 127],
+                [443, 72],
+              ].map(([cx, cy], index) => (
+                <g key={index}>
+                  <circle className="route-map-stop" cx={cx} cy={cy} r="15" />
+                  <text
+                    className="route-map-number"
+                    x={cx}
+                    y={cy + 5}
+                    textAnchor="middle"
+                  >
+                    {index + 1}
+                  </text>
+                </g>
+              ))}
+            </svg>
+            <div className="route-preview-map-legend">
+              <span><i aria-hidden="true" /> Planned route</span>
+              <span>5 stops</span>
+            </div>
+          </div>
+          <div className="route-preview-start">
+            <div>
+              <strong>Start &amp; Return</strong>
+              <span>Saved starting location&nbsp; → &nbsp;Back to start</span>
+            </div>
+            <small>Optional</small>
+          </div>
+          <div className="route-preview-button">Start route</div>
+        </section>
+
+        <div className="route-preview-jobs">
+          <strong>Jobs <span>· 5</span></strong>
+          <div className="route-preview-job-row">
+            <span>01</span><b>First stop</b><small>Open in Maps ↗</small>
+          </div>
+          <div className="route-preview-job-row">
+            <span>02</span><b>Next stop</b><small>Open in Maps ↗</small>
+          </div>
+        </div>
+      </div>
+      <figcaption>
+        Interface preview with sample stops · No personal addresses shown
+      </figcaption>
+    </figure>
+  );
+}
 
 export default function RoutePlannerPage() {
   return (
@@ -8,50 +105,96 @@ export default function RoutePlannerPage() {
         links={[
           { href: "#/", label: "Portfolio" },
           { href: "#/projects/routeplanner", label: "Route Planner" },
-          { href: "mailto:johnathanfuller0@gmail.com?subject=Route%20Planner", label: "Contact" },
+          { href: contactHref, label: "Contact" },
         ]}
       />
+
       <section className="product-hero">
         <div className="product-hero-copy">
-          <p className="eyebrow">Project overview</p>
+          <p className="eyebrow">Multi-stop route planner · In development</p>
+          <img
+            className="route-planner-icon"
+            src={`${PUBLIC}/routeplanner-icon.svg`}
+            alt="Route Planner app icon"
+            width="80"
+            height="80"
+          />
           <h1>Route Planner</h1>
-          <p className="product-subtitle">Every journey starts with a plan.</p>
+          <p className="product-subtitle">
+            Turn a day of stops into a route you can follow.
+          </p>
           <p className="product-description">
-            A route-planning project from Pierre Fuller Labs. More details about
-            the app, its features and the thinking behind it are coming soon.
+            Bring the day’s jobs together, arrange the stops, see the route on
+            a map, and open each destination in Maps when it’s time to go.
           </p>
           <div className="product-actions">
-            <a className="primary-button" href="mailto:johnathanfuller0@gmail.com?subject=Route%20Planner">
-              Get in touch
+            <a className="primary-button" href={contactHref}>
+              Contact about the app
             </a>
-            <a className="secondary-button" href="#/">Explore more projects</a>
+            <a className="secondary-button" href="#/">
+              Explore the portfolio
+            </a>
           </div>
         </div>
-        <figure className="route-planner-visual">
-          <svg viewBox="0 0 480 400" role="img" aria-labelledby="route-illustration-title">
-            <title id="route-illustration-title">Illustration of a journey connecting three stops</title>
-            <defs>
-              <pattern id="route-grid" width="48" height="48" patternUnits="userSpaceOnUse">
-                <path d="M 48 0 H 0 V 48" fill="none" stroke="currentColor" strokeOpacity="0.09" />
-              </pattern>
-            </defs>
-            <rect width="480" height="400" fill="url(#route-grid)" />
-            <path d="M -20 280 L 500 80 M 100 -20 L 300 420 M -20 90 L 500 310" fill="none" stroke="currentColor" strokeOpacity="0.07" strokeWidth="20" />
-            <path d="M 90 300 V 200 Q 90 170 120 170 H 290 Q 320 170 320 140 V 90 H 390" fill="none" stroke="#34c759" strokeWidth="8" strokeLinecap="round" strokeLinejoin="round" />
-            {[ [90, 300], [230, 170], [390, 90] ].map(([cx, cy], index) => (
-              <g key={index}>
-                <circle cx={cx} cy={cy} r="19" fill="var(--text-strong)" />
-                <text x={cx} y={cy + 5} textAnchor="middle" fill="var(--page-label-color)" fontSize="14" fontWeight="700">{index + 1}</text>
-              </g>
-            ))}
-          </svg>
-          <figcaption>A journey, at a glance · Concept illustration</figcaption>
-        </figure>
+        <RoutePlannerPreview />
       </section>
-      <section className="product-section route-planner-details">
-        <p className="eyebrow">More to come</p>
-        <h2>A closer look is on the way.</h2>
-        <p>App screenshots, project details and release information will be shared here when available.</p>
+
+      <section className="product-section split-section route-planner-how">
+        <div>
+          <p className="eyebrow">Built for days in motion</p>
+          <h2>See the plan before you start driving.</h2>
+          <p>
+            Route Planner keeps the job list and the day’s route together. Check
+            the full sequence, choose how stops should be arranged, and keep
+            navigation close at hand.
+          </p>
+        </div>
+        <div className="steps-list">
+          <StepCard number="01" title="Choose a day and add its job stops" />
+          <StepCard number="02" title="Arrange stops and set an optional start and return" />
+          <StepCard number="03" title="Review the route, then open a stop in Maps" />
+        </div>
+      </section>
+
+      <section className="product-section route-planner-features">
+        <div className="section-heading">
+          <p className="eyebrow">The route at a glance</p>
+          <h2>A practical view of the whole day.</h2>
+          <p>
+            Keep the important route details visible while you move from one
+            destination to the next.
+          </p>
+        </div>
+        <div className="feature-grid">
+          {[
+            "Plan multiple destinations for a selected day",
+            "Arrange stops in the order that works for you",
+            "See the route and stops together on a map",
+            "Open a destination directly in Maps",
+          ].map((feature) => (
+            <div className="feature-card" key={feature}>
+              <span className="feature-dot" aria-hidden="true" />
+              <p>{feature}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="product-section route-planner-callout">
+        <p className="eyebrow">In development</p>
+        <h2>A clearer plan for the next stop.</h2>
+        <p>
+          Route Planner is being shaped around real multi-stop workdays. Release
+          information will be added as the app moves forward.
+        </p>
+        <div className="product-actions">
+          <a className="primary-button" href={contactHref}>
+            Contact
+          </a>
+          <a className="secondary-button" href="#/">
+            Back to the portfolio
+          </a>
+        </div>
       </section>
     </main>
   );
